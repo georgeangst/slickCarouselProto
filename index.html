@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+  <style>
+    .slide {
+      margin: 50px 10px;
+      position: relative;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      transition: all 300ms ease;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .slide .text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 0;
+      padding: 20px 15px;
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      width: calc(100% - 50px);
+
+    }
+
+    .slide .description {
+      order: 1;
+      opacity: 1;
+    }
+
+    .slick-current .slide {
+      margin: 0 10px;
+      height: 600px;
+    }
+
+    .slick-current .slide .text {
+      opacity: 1;
+    }
+
+    .slick-current .slide .description {
+      opacity: 0;
+    }
+
+    .slick-prev {
+      z-index: 1;
+      left: 50px;
+    }
+
+    .slick-next {
+      z-index: 1;
+      right: 50px;
+    }
+
+    .slick-prev.slick-disabled,
+    .slick-next.slick-disabled {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="slider fade">
+  <div>
+    <div class="slide">
+      <div class="text">
+        some text 1 some text 1 some text 1some text 1 some text 1some
+      </div>
+      <div class="description">
+        some description 1 some description 1 some description 1some description 1 some description 1some
+      </div>
+      <img src="http://kenwheeler.github.io/slick/img/fonz1.png"/>
+    </div>
+  </div>
+  <div>
+    <div class="slide">
+      <div class="text">
+        some text 2
+      </div>
+      <div class="description">
+        some description 2 some description 2 some description 2 some description 2 some description 1some
+      </div>
+      <img src="http://kenwheeler.github.io/slick/img/fonz2.png"/>
+    </div>
+  </div>
+  <div>
+    <div class="slide">
+      <div class="text">
+        some text 3
+      </div>
+      <div class="description">
+        some description 3 some description 3 some description 3 some description 3 some description 1some
+      </div>
+      <img src="http://kenwheeler.github.io/slick/img/fonz3.png"/>
+    </div>
+  </div>
+  <div>
+    <div class="slide">
+      <div class="text">
+        some text 4
+      </div>
+      <div class="description">
+        some description 4 some description 4 some description 4 some description 4 some description 4 some
+      </div>
+      <img src="http://kenwheeler.github.io/slick/img/fonz1.png"/>
+    </div>
+  </div>
+  <div>
+    <div class="slide">
+      <div class="text">
+        some text 5
+      </div>
+      <div class="description">
+        some description 5 some description 5 some description 5 some description 5 some description 5 some
+      </div>
+      <img src="http://kenwheeler.github.io/slick/img/fonz2.png"/>
+    </div>
+  </div>
+  <div>
+    <div class="slide">
+      <div class="text">
+        some text 6
+      </div>
+      <div class="description">
+        some description 6 some description 6 some description 6 some description 6 some description 1some
+      </div>
+      <img src="http://kenwheeler.github.io/slick/img/fonz3.png"/>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+<script>
+  $('.slider').slick({
+    infinite: false,
+    dots: true,
+    speed: 300,
+    slidesToShow: 3,
+    pauseOnFocus: true,
+    autoplay: true,
+    swipeToSlide: true,
+    centerMode: false
+  });
+</script>
+</body>
+</html>
